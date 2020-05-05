@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BattleController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1400.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../bin/application/Battle.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="PlayerImageView" fitHeight="392.0" fitWidth="590.0" layoutX="238.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/application/PlayerBlue.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_RIGHT" layoutY="600.0" prefHeight="200.0" prefWidth="1400.0">
+         <children>
+            <TextArea fx:id="combatTextTextArea" editable="false" focusTraversable="false" maxHeight="140.0" maxWidth="500.0" prefHeight="140.0" prefWidth="500.0">
+               <HBox.margin>
+                  <Insets right="60.0" top="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextArea>
+            <VBox prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="fightButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#fightButtonPressed" text="Fight">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="bagButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#bagButtonPressed" text="Bag">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" top="30.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="loadoutButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadoutButtonPressed" text="Loadout">
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="runButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#runButtonPressed" text="Run">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="currentHPLable" layoutX="1099.0" layoutY="524.0" text="10" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="enemyHPProgressBar" layoutX="104.0" layoutY="101.0" prefHeight="20.0" prefWidth="380.0" progress="1.0" />
+      <ProgressBar fx:id="playerHPProgressBar" layoutX="990.0" layoutY="495.0" prefHeight="20.0" prefWidth="380.0" progress="0.5" />
+      <Label layoutX="1135.0" layoutY="524.0" text="/" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maxHPLable" layoutX="1158.0" layoutY="524.0" prefHeight="8.0" prefWidth="28.0" text="20" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="99.0" text="HP">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="949.0" layoutY="493.0" text="HP">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyLVLLable" layoutX="158.0" layoutY="60.0" text="5" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="60.0" text="LVL" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ZoneOneImageView" fitHeight="150.0" fitWidth="200.0" layoutX="909.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../bin/application/ZoneOneBlue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ZoneTwoImageView" fitHeight="200.0" fitWidth="173.0" layoutX="875.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../bin/application/ZoneTwoBlue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ZoneThreeImageView" fitHeight="320.0" fitWidth="275.0" layoutX="796.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../bin/application/ZoneThreeGreen.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
